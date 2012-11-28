@@ -1,0 +1,39 @@
+extends layout
+
+append scripts
+  script(type='text/javascript', src='/socket.io/socket.io.js')
+  script(type='text/javascript', src='/javascripts/clientchat.js')
+
+append styles
+  style(type='text/css')
+    #chatbox {
+      width: 500px;
+      height: 300px;
+      overflow: scroll;
+      border: 1px solid black;
+    }
+    .message {
+      padding: 10px;
+      border-top: 1px solid gray;
+      width: 100%;
+      word-wrap: break-word;
+      box-sizing: border-box;
+    }
+    .message:first-child {
+      border-top: none;
+    }
+    #chatEntry {
+      width: 500px;
+      background: black;
+      color: white;
+      font-family: monospace;
+      border: none;
+      outline: none;
+      font-size: 16px;
+      padding: 5px;
+      box-sizing: border-box;
+    }
+
+block content
+  div#chatbox
+  input#chatEntry(type="text")
