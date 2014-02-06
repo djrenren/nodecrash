@@ -1,7 +1,7 @@
 window.onload = function(){
   var chatEntry = document.getElementById('chatEntry'),
     chatBox = document.getElementById('chatbox'),
-    client = io.connect('http://john.wireless.rit.edu:3000');
+    client = io.connect('http://localhost:3000');
 
   function displayChat(info){
     chatbox.innerHTML +=
